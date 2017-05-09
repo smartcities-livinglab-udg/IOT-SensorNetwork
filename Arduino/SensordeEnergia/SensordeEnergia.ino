@@ -1,10 +1,5 @@
 /**
-  * Description: This code has been only tested in Intel Galileo Gen 1 and gets the readings of the next sensors:
-        * TSL2561 - Light sensor
-        * MPL115A - Temperature and pressure sensor
-        * MAX4466 - Noise sensor
-        * HTU21DF - Humidity sensor
-        * Grove multichanel gas sensor
+  * Description: This code has been only tested in Intel Galileo Gen 1 and gets the readings of the next sensors:        
         * SCT-013-000 - Electric current sensor
     Then it calls the python scripts to send the data to the server via MQTT. All readings are writen to a file
     located in the SD card, located by default in '/media/mmcblk0p1/'. The SD functions were taken from:
@@ -473,16 +468,19 @@ void loop(void)
       if (DEBUG == 1) Serial.println("state:readSensors");
       if( (readingFlag & POTENCIA) == POTENCIA)
       {
-        if(DEBUG == 1)
-        {
-          Serial.println("ENERGY SENSORS");
+        
+          if(DEBUG == 1) Serial.println("ENERGY SENSORS");
           for(int i = 0; i < ENERGY_COUNT; i++)
           {
-            Serial.print(i+1);
-            Serial.print(" Sensor: ");
-            Serial.println(m.power[i]);
+            getCurrent(energySensors[i],i);
+            if(DEBUG == 1)
+            {
+              Serial.print(i+1);
+              Serial.print(" Sensor: ");
+              Serial.println(m.power[i]);
+            }
           }
-        }
+        
       }
       state = checkRanges;
       break;
