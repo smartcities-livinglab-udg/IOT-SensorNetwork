@@ -1,6 +1,8 @@
-# IOT-SensorNetwork
+# OpenEnergyMettering
 
-## This project has only been tested with Intel Galileo Gen 1
+The goal of this project is to create a sensor network to metter energy consumption in a complex of buildings open to all community looking to replicate this project. Once we are able to measure energy consumption, historical datasets will be created for analytics and to implement an energy saving stratey to reduce the carbon footprint for the
+
+## This project has only been tested with Intel Galileo Gen 1 and is under development for Raspberry Pi.
 
 ### Setting up Intel Galileo
 
