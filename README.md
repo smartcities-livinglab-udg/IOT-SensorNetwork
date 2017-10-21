@@ -1,6 +1,6 @@
 # OpenEnergyMettering
 
-The goal of this project is to create a sensor network to metter energy consumption in a complex of buildings open to all community looking to replicate this project. Once we are able to measure energy consumption, historical datasets will be created for analytics and to implement an energy saving stratey to reduce the carbon footprint for the
+The goal of this project is to create a sensor network to metter energy consumption in a complex of buildings open to all community looking to replicate this project. Once we are able to measure energy consumption, historical datasets will be created for analytics and to implement an energy saving stratey to reduce the carbon footprint for the complex of buildings at the Smart Cities Living Lab at the University of Guadalajara. 
 
 ## This project has only been tested with Intel Galileo Gen 1 and is under development for Raspberry Pi.
 
